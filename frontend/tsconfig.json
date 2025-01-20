@@ -1,4 +1,11 @@
 {
+  "compilerOptions": {
+    "baseUrl": "./", // Gốc của dự án
+    "paths": {
+      "@/*": ["src/*"] // Alias cho thư mục src
+    }
+  },
+  "include": ["src"],
   "files": [],
   "references": [
     {

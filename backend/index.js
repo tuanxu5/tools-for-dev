@@ -5,8 +5,10 @@ const categoriesRoute = require("./routers/category-router");
 const cardsRoute = require("./routers/card-router");
 
 const connectMongooseDB = require("./configs/connect-mongo");
+const configsCors = require("./configs/config-cors");
 
 connectMongooseDB();
+configsCors(app);
 
 app.use(express.json());
 

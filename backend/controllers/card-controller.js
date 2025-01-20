@@ -3,7 +3,7 @@ const Cards = require("../models/cards");
 // Get All Cards
 exports.getCards = async (req, res) => {
   try {
-    const cards = await Cards.find().populate("categories", "name");
+    const cards = await Cards.find();
     res.status(200).json({ success: true, data: cards });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
